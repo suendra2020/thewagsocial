@@ -1,0 +1,6 @@
+{
+  "name": "The Wag Social",
+  "description": "Premium Dog Boarding, Day Care & Grooming Services in Varthur, Bengaluru. Large cage-free campus with high-trust pet boarding, daily exercise, and real-time updates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
