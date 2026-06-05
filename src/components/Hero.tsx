@@ -7,6 +7,17 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Star, ShieldCheck, Heart, UserCheck, PhoneCall, Calendar, Play, PawPrint } from "lucide-react";
 import { BUSINESS_INFO } from "../data";
+import wg1 from "../assets/images/wg1.png";
+import wg2 from "../assets/images/wg2.png";
+import wg3 from "../assets/images/wg3.png";
+import wg4 from "../assets/images/wg4.png";
+import wg5 from "../assets/images/wg5.png";
+import wg6 from "../assets/images/wg6.png";
+import wg7 from "../assets/images/wg7.png";
+import wg8 from "../assets/images/wg8.png";
+import wg9 from "../assets/images/wg9.png";
+import wg10 from "../assets/images/wg10.png";
+import wg11 from "../assets/images/wg11.png";
 
 interface HeroProps {
   onBookNowClick: () => void;
@@ -15,27 +26,28 @@ interface HeroProps {
 
 // Seamless image lists for continuous scrolling vertical marquee columns
 const COLUMN_ONE_IMAGES = [
-  "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=500&q=80", // Dogs running
-  "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=500&q=80", // Golden retriever happy
-  "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=500&q=80", // Cute close up
-  "https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=500&q=80", // Two dogs playing
-  "https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=500&q=80", // Jumping pup
-  "https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?auto=format&fit=crop&w=500&q=80"  // Puppy in nature
+  wg1,
+  wg2,
+  wg3,
+  wg4,
+  wg5,
+  wg6
+
 ];
 
 const COLUMN_TWO_IMAGES = [
-  "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=500&q=80", // Dog groom bubbles
-  "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=500&q=80", // Dog lick owner
-  "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=500&q=80", // Fast border collie running
-  "https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?auto=format&fit=crop&w=500&q=80", // Golden puppy
-  "https://images.unsplash.com/photo-1514984879728-be0aff75a6e8?auto=format&fit=crop&w=500&q=80", // Multi dogs sitting
-  "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=500&q=80"  // Beautiful lab looking up
+  wg7,
+  wg8,
+  wg9,
+  wg10,
+  wg11
 ];
+
 
 const COLUMN_THREE_IMAGES = [
   "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80", // Cute tongue dog
   "https://images.unsplash.com/photo-1444212477490-ca407925329e?auto=format&fit=crop&w=500&q=80", // Dogs pack running
-  "https://images.unsplash.com/photo-1537151608828-ea2b117b6281?auto=format&fit=crop&w=500&q=80", // Cute puppy
+  wg10,
   "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=500&q=80", // Grooming pet looking fresh
   "https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?auto=format&fit=crop&w=500&q=80", // Active golden dog jumping on grass
   "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=500&q=80"  // Happy labrador in bath
@@ -403,7 +415,7 @@ export default function Hero({ onBookNowClick, onScheduleVisitClick }: HeroProps
           </div>
 
           {/* Right vertical marquee columns (Visible on all devices, adjusted heights) */}
-          <div className="min-[1120px]:col-span-6 flex items-center gap-2.5 sm:gap-3.5 h-[320px] sm:h-[450px] min-[1120px]:h-[580px] overflow-hidden select-none relative max-w-2xl mx-auto w-full mt-10 min-[1120px]:mt-0">
+          <div className="min-[1120px]:col-span-6 flex items-center gap-2.5 sm:gap-3.5 h-[320px] sm:h-[450px] min-[1120px]:h-[580px] overflow-hidden select-none relative max-w-2xl mx-auto w-full mt-10 min-[1120px]:mt-0 rightside-scroll">
             <div className="absolute top-0 inset-x-0 h-10 sm:h-16 bg-gradient-to-b from-slate-50 dark:from-slate-950 to-transparent pointer-events-none z-20" />
             
             <VerticalMarquee images={COLUMN_ONE_IMAGES} reverse={false} />

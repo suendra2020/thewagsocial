@@ -886,7 +886,7 @@ Our team will contact you within 15–30 minutes via WhatsApp or phone call to c
                   <div className="mt-6 pt-4 border-t border-slate-800 flex gap-2">
                     <button
                       onClick={() => {
-                        alert("Booking Approved! Client notified on email & WhatsApp.");
+                        alert("Booking Approved! Client notified on email.");
                         setCompletedBooking(null);
                       }}
                       className="flex-grow py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs uppercase cursor-pointer"

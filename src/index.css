@@ -65,3 +65,8 @@
 background: #0c218a;
 background: radial-gradient(circle,rgba(12, 33, 138, 1) 0%, rgba(70, 203, 252, 1) 100%);
 }
+
+.rightside-scroll {
+ position: relative;
+  top: -92px;
+}
