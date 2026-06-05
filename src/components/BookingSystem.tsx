@@ -323,6 +323,7 @@ Our team will contact you within 15–30 minutes via WhatsApp or phone call to c
             {/* Core Form Elements */}
             <form 
               name="dog-booking" 
+              method="POST"
               onSubmit={handleBookingSubmit} 
               data-netlify="true" 
               netlify-honeypot="bot-field"

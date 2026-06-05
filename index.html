@@ -31,24 +31,36 @@
   </head>
   <body class="bg-gray-50 text-gray-900 overflow-x-hidden antialiased selection:bg-amber-100 selection:text-amber-900 transition-colors duration-300">
     <!-- Hidden form for Netlify Bot to detect fields at build-time -->
-    <form name="dog-booking" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="parentName" />
-      <input type="tel" name="mobileNumber" />
-      <input type="email" name="email" />
-      <input type="tel" name="emergencyContact" />
-      <input type="text" name="dogName" />
-      <input type="text" name="dogBreed" />
-      <input type="number" name="dogAge" />
-      <input type="text" name="vaccinationStatus" />
-      <input type="date" name="checkInDate" />
-      <input type="date" name="checkOutDate" />
-      <input type="text" name="dropOffTime" />
-      <input type="text" name="pickupTime" />
-      <textarea name="specialInstructions"></textarea>
-      <input type="text" name="vaccinationCertificateName" />
-      <input type="text" name="serviceType" />
-      <input type="number" name="totalEstimatedPrice" />
-    </form>
+   <form
+  name="dog-booking"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  hidden
+>
+  <!-- Required hidden field -->
+  <input type="hidden" name="form-name" value="dog-booking" />
+
+  <!-- Honeypot field -->
+  <input type="text" name="bot-field" />
+
+  <input type="text" name="parentName" />
+  <input type="tel" name="mobileNumber" />
+  <input type="email" name="email" />
+  <input type="tel" name="emergencyContact" />
+  <input type="text" name="dogName" />
+  <input type="text" name="dogBreed" />
+  <input type="number" name="dogAge" />
+  <input type="text" name="vaccinationStatus" />
+  <input type="date" name="checkInDate" />
+  <input type="date" name="checkOutDate" />
+  <input type="text" name="dropOffTime" />
+  <input type="text" name="pickupTime" />
+  <textarea name="specialInstructions"></textarea>
+  <input type="text" name="vaccinationCertificateName" />
+  <input type="text" name="serviceType" />
+  <input type="number" name="totalEstimatedPrice" />
+</form>
     
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
