@@ -228,9 +228,20 @@ export default function BookingSystem({ selectedServiceId }: BookingSystemProps)
       })
     })
     .then(() => {
-      setSubmitting(false);
-      setCompletedBooking(finalSubmission);
-    })
+  setSubmitting(false);
+
+  alert(
+    `🎉 Booking Submitted Successfully!
+
+Thank you ${finalSubmission.parentName}.
+
+Booking ID: ${finalSubmission.id}
+
+Our team will contact you within 15–30 minutes via WhatsApp or phone call to confirm your pet's stay.`
+  );
+
+  setCompletedBooking(finalSubmission);
+})
     .catch((err) => {
       console.warn("Netlify Forms POST error (expected outside Netlify environment):", err);
       // Fallback: Succeed anyway so the client gets a beautiful mock outbox in preview mode!
@@ -785,12 +796,13 @@ export default function BookingSystem({ selectedServiceId }: BookingSystemProps)
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-display font-medium text-lg text-white">
-                      The Wag Social AutoMailer SMTP Network
-                    </h3>
-                    <p className="text-xs text-slate-400 font-mono mt-0.5">
-                      Status: Delivery Complete (Success) CODE: 250 SUCCESSFUL
-                    </p>
+                    <h3 className="font-display font-bold text-xl text-emerald-400">
+  🎉 Booking Request Submitted Successfully!
+</h3>
+
+<p className="text-sm text-slate-300 mt-1">
+  Thank you for choosing The Wag Social. Your booking request has been received and is currently under review.
+</p>
                   </div>
                 </div>
 
